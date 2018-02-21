@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+{% extends "base.html" %}
+{% block title %}
+	Index
+{% endblock %}
+{% block content %}
+<ul class="list-group">
+	{% for file in files %}
+	<li class="list-group-item">
+		<a href="/files/{{file.id}}">
+			<h2>{{ file.title }}</h2>
+		</a> 
+		{% for tag in tags[file.id]%}
+			<span class="label label-success">{{ tag }}> </span>
+		{% endfor %}
+	</li>
+	{% endfor %}
+</ul>
+{% endblock %}
+=======
 {% for file in files %}
 	<p><a href="/files/{{file.id}}">{{ file.title }}</a></p>
 {% endfor %}
+>>>>>>> ebc9b3f0de0dc5c0b58927a655c74552cd5b91b4

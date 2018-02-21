@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+{% extends "base.html" %}
+{% block title %}File{% endblock %}
+
+{% block content %}
+{% for key, value in article.items() %}
+<li class="list-group-item">
+	<p> {{ key }} : {{ value }} </p>
+</li>
+{% endfor %}
+{% endblock %}
+=======
 {% for key, value in article.items() %}
 	<p> {{ key }} : {{ value }} </p>
 {% endfor %}
+>>>>>>> ebc9b3f0de0dc5c0b58927a655c74552cd5b91b4
