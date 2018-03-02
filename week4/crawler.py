@@ -4,7 +4,7 @@ class Crawler(scrapy.Spider):
 	name='spider-repositories'
 	def start_requests(self):
 		url = 'https://github.com/shiyanlou?page={}&tab=repositories'
-		urls = (url.format(i) for i in range(1, 4))
+		urls = (url.format(i) for i in range(1, 5))
 
 		for url in urls:
 			yield scrapy.Request(url=url, callback=self.parse)
